@@ -81,6 +81,9 @@ exports.postCreateMessage = async (req,res)=>{
 exports.showDetails = (req,res)=>{
     const messageId = parseInt(req.params.messageID,10);
     const message = DB.messageById(messageId);
+    if(isNaN(messageId) || messageId < 0 || messageId > id){ 
+        res.status(404).render('404');
+    }
     res.render('details', {message});
 }
 
