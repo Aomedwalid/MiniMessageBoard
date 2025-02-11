@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const indexRoute = require('./routes/routesMessages');
+require('dotenv').config();
 
 //setting the pathes
 
@@ -22,4 +23,4 @@ app.set('view engine' , 'ejs');
 app.use('/',indexRoute);
 //listener
 
-app.listen(3000);
+app.listen(process.env.PORT_NUMBER);
