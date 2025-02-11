@@ -22,3 +22,5 @@ routes.post('/create-message' , constroller.postCreateMessage);
 //error routes 
 
 routes.get('*' , constroller.showWrongRoute);
+
+module.exports = routes;

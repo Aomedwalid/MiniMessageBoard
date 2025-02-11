@@ -29,34 +29,3 @@
     </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Message Board</title>
-    <link rel="stylesheet" href="/indexStyle.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Mini Message Board</h1>
-
-        <a href="/create-message" class="create-message">Create a New Message</a>
-
-        <div class="message-list">
-            <% if(messages.length > 0){ %>
-                <% messages.forEach(message => { %>
-                    <div class="message">
-                        <p class="user"><strong><%= message.user %>: &nbsp;&nbsp;</strong></p>
-                        <p class="message-text"><%= message.text %></p>
-                        <div class = "messageDetails">
-                        <p class="date"><%= message.added %></p>
-                        <p class="details"><a href="<%= message.id %>">more details</a></p>
-                        </div>
-                    </div>
-                <% })} %>
-
-        </div>
-    </div>
-</body>
-</html>
